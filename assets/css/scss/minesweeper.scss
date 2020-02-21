@@ -1,0 +1,42 @@
+@import "fonts/segment/stylesheet.css";
+
+* {
+    box-sizing: border-box;
+    position  : relative;
+}
+
+:root {
+    --digi-font-family                : 'segment7standard';
+    --cell-background-color           : #c9c9c9;
+    --cell-background-color_dark      : #222;
+    --cell-open-background-color      : lightgray;
+    --cell-open-background-color_dark : #353535;
+    --cell-hover-background-color     : #dcdada;
+    --cell-hover-background-color_dark: #424242;
+    --cell-border-color               : #aaa;
+    --cell-border-color_dark          : #292929;
+    --border-color_dark               : #404040;
+}
+
+html {
+    font-size: 13px;
+}
+
+@import 'components/ms.scss';
+@import 'components/ms-body.scss';
+@import 'components/ms-button.scss';
+@import 'components/ms-cell.scss';
+@import 'components/ms-drag.scss';
+@import 'components/ms-grid.scss';
+@import 'components/ms-header.scss';
+@import 'components/ms-input.scss';
+@import 'components/ms-menu.scss';
+@import 'components/toggler.scss';
+@import 'components/toolbox.scss';
+
+.dark-mode {
+    font-family: sans-serif;
+    font-size  : 1rem;
+    line-height: 2;
+    color      : #444;
+}

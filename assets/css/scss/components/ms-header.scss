@@ -1,0 +1,13 @@
+.ms-header {
+    display         : flex;
+    justify-content : space-between;
+    background-color: var(--cell-open-background-color);
+    border          : 3px inset;
+    padding         : 5px;
+    margin-bottom   : 7px;
+
+    .dark & {
+        background-color: var(--cell-open-background-color_dark);
+        border-color    : var(--border-color_dark);
+    }
+}

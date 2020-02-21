@@ -1,0 +1,46 @@
+{
+    "name": "minesweeper",
+    "author": "kirusanov@gmail.com",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/f104/minesweeper.git"
+    },
+    "license": "MIT",
+    "scripts": {
+        "dev": "gulp development",
+        "server": "gulp"
+    },
+    "browserslist": [
+        "since 2017",
+        "last 2 versions"
+    ],
+    "devDependencies": {
+        "@babel/core": "^7.0.0",
+        "@babel/preset-env": "^7.1.0",
+        "@babel/register": "^7.0.0",
+        "ansi-colors": "^3.2.3",
+        "babel-loader": "^8.0.5",
+        "browser-sync": "^2.23.6",
+        "fancy-log": "^1.3.3",
+        "gulp": "^4.0.0",
+        "gulp-autoprefixer": "^5.0.0",
+        "gulp-babel": "^8.0.0",
+        "gulp-clean": "^0.4.0",
+        "gulp-clean-css": "^3.9.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-debug": "^3.2.0",
+        "gulp-filter": "^5.1.0",
+        "gulp-if": "^2.0.2",
+        "gulp-plumber": "^1.2.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-replace": "^0.6.1",
+        "gulp-sass": "^3.1.0",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-uglify": "^3.0.0",
+        "gulp-watch": "^5.0.0",
+        "uglifyjs-webpack-plugin": "^2.1.1",
+        "webpack-stream": "^5.2.1",
+        "yargs": "^12.0.5"
+    }
+}

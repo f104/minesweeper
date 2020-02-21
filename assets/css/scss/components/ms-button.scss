@@ -1,0 +1,44 @@
+.ms-button {
+    display              : block;
+    width                : 35px;
+    height               : 35px;
+    padding              : 0;
+    font-size            : 0;
+    outline              : none;
+    cursor               : pointer;
+    border               : 3px outset var(--cell-border-color);
+    background-color     : var(--cell-background-color);
+    background-image     : url(faces.png);
+    background-position-y: center;
+    background-position-x: 0px;
+
+
+    .dark & {
+        border          : 3px outset var(--cell-border-color_dark);
+        background-color: var(--cell-background-color_dark);
+    }
+
+    &._check {
+        background-position-x: -29px;
+    }
+
+    &._win {
+        background-position-x: -58px;
+    }
+
+    &._lost {
+        background-position-x: -88px;
+    }
+
+    &:hover {
+        background-color: var(--cell-hover-background-color) !important;
+
+        .dark & {
+            background-color: var(--cell-hover-background-color_dark) !important;
+        }
+    }
+
+    &:active {
+        border-style: inset;
+    }
+}

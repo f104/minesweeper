@@ -1,0 +1,11 @@
+.ms {
+    position        : absolute;
+    background-color: var(--cell-open-background-color);
+    border          : 3px outset;
+    padding         : 8px;
+
+    .dark & {
+        background-color: var(--cell-open-background-color_dark);
+        border-color    : var(--border-color_dark);
+    }
+}

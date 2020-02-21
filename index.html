@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Minesweeper</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="ms-body">
+    <div class="ms">
+        <ul class="ms-menu">
+            <li class="ms-menu__item">
+                <span class="ms-menu__link">Menu</span>
+                <ul class="ms-menu">
+                    <li class="ms-menu__item">
+                        <span class="ms-menu__link js-ms-new">
+                            New game
+                            <span class="ms-menu__link__key">F2</span>
+                        </span>
+                    </li>
+                    <li class="ms-menu__item">
+                        <span class="ms-menu__link">Level</span>
+                        <ul class="ms-menu">
+                            <li class="ms-menu__item js-ms-level" data-level="beginner">
+                                <span class="ms-menu__link">
+                                    Beginner
+                                    <span class="ms-menu__link__key">B</span>
+                                </span>
+                            </li>
+                            <li class="ms-menu__item">
+                                <span class="ms-menu__link js-ms-level" data-level="intermediate">
+                                    Intermediate
+                                    <span class="ms-menu__link__key">I</span>
+                                </span>
+                            </li>
+                            <li class="ms-menu__item">
+                                <span class="ms-menu__link js-ms-level" data-level="expert">
+                                    Expert
+                                    <span class="ms-menu__link__key">E</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="ms-menu__item">
+                        <span class="ms-menu__link js-ms-cheat">
+                            Cheat
+                            <span class="ms-menu__link__key">C</span>
+                        </span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ms-drag"></div>
+        <div class="ms-header">
+            <div class="ms-input">
+                <input name="ms-minecounter" value="10" readonly>
+            </div>
+            <button class="ms-button js-ms-button" title="Start new game (F2)">Start new game</button>
+            <div class="ms-input">
+                <input name="ms-timer" value="0" readonly>
+            </div>
+        </div>
+        <div id="minesweeper" class="minesweeper"></div>
+    </div>
+
+    <div class="toolbox">
+        <div class="dark-mode">
+            Dark mode
+            <label class="toggler">
+                <input type="checkbox" class="toggler__input js-dark-mode">
+                <span class="toggler__inner"></span>
+            </label>
+        </div>
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/minesweeper.css">
+    <script type="module" src="assets/js/app.js"></script>
+</body>
+
+</html>

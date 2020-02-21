@@ -1,0 +1,50 @@
+.toggler {
+    $root: &;
+
+    --bg-color        : #fff;
+    --bg-color_checked: #2f2fa075;
+    --color           : #fff;
+    --color_checked   : #2f2fa0;
+
+    cursor     : pointer;
+    display    : inline-block;
+    margin-left: 1ex;
+
+    &__input {
+        display: none;
+
+        &:checked+#{$root}__inner {
+            background: var(--bg-color_checked);
+
+            &:before {
+                left      : 10px;
+                background: var(--color_checked);
+            }
+        }
+    }
+
+    &__inner {
+        display      : inline-block;
+        width        : 26px;
+        height       : 10px;
+        background   : var(--bg-color);
+        border-radius: 10px;
+        transition   : background .2s ease-in-out;
+
+        &:before {
+            content                   : '';
+            position                  : absolute;
+            width                     : 16px;
+            height                    : 16px;
+            background                : var(--color);
+            border-radius             : 50%;
+            left                      : 0px;
+            top                       : -3px;
+            transition-property       : left, background;
+            box-shadow                : 1px 1px 3px #444;
+            transition-duration       : .2s;
+            transition-timing-function: ease-in-out;
+        }
+    }
+
+}

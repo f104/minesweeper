@@ -1,0 +1,14 @@
+.ms-grid {
+    display       : inline-grid;
+    user-select   : none;
+    border        : 3px inset;
+    pointer-events: none;
+
+    .dark & {
+        border-color: var(--border-color_dark);
+    }
+
+    .minesweeper._running & {
+        pointer-events: all;
+    }
+}
