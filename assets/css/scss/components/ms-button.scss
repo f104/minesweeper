@@ -8,9 +8,10 @@
     cursor               : pointer;
     border               : 3px outset var(--cell-border-color);
     background-color     : var(--cell-background-color);
-    background-image     : url(faces.png);
-    background-position-y: center;
-    background-position-x: 0px;
+    background-image     : url(faces.svg);
+    background-position-y: 0;
+    background-position-x: 0;
+    background-repeat    : no-repeat;
 
 
     .dark & {
@@ -27,7 +28,7 @@
     }
 
     &._lost {
-        background-position-x: -88px;
+        background-position-x: -87px;
     }
 
     &:hover {

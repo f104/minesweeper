@@ -1,7 +1,7 @@
 .ms-grid {
     display       : inline-grid;
     user-select   : none;
-    border        : 3px inset;
+    border        : 3px inset var(--border-color);
     pointer-events: none;
 
     .dark & {

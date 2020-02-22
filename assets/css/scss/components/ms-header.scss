@@ -2,7 +2,7 @@
     display         : flex;
     justify-content : space-between;
     background-color: var(--cell-open-background-color);
-    border          : 3px inset;
+    border          : 3px inset var(--border-color);
     padding         : 5px;
     margin-bottom   : 7px;
 

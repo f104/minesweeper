@@ -1,7 +1,7 @@
 .ms {
     position        : absolute;
     background-color: var(--cell-open-background-color);
-    border          : 3px outset;
+    border          : 3px outset var(--border-color);
     padding         : 8px;
 
     .dark & {

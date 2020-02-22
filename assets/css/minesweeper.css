@@ -13,6 +13,7 @@
   --cell-hover-background-color_dark: #424242;
   --cell-border-color: #aaa;
   --cell-border-color_dark: #292929;
+  --border-color: #b7b7b7;
   --border-color_dark: #404040; }
 
 html {
@@ -21,7 +22,7 @@ html {
 .ms {
   position: absolute;
   background-color: var(--cell-open-background-color);
-  border: 3px outset;
+  border: 3px outset var(--border-color);
   padding: 8px; }
   .dark .ms {
     background-color: var(--cell-open-background-color_dark);
@@ -50,9 +51,10 @@ html {
   cursor: pointer;
   border: 3px outset var(--cell-border-color);
   background-color: var(--cell-background-color);
-  background-image: url(faces.png);
-  background-position-y: center;
-  background-position-x: 0px; }
+  background-image: url(faces.svg);
+  background-position-y: 0;
+  background-position-x: 0;
+  background-repeat: no-repeat; }
   .dark .ms-button {
     border: 3px outset var(--cell-border-color_dark);
     background-color: var(--cell-background-color_dark); }
@@ -61,7 +63,7 @@ html {
   .ms-button._win {
     background-position-x: -58px; }
   .ms-button._lost {
-    background-position-x: -88px; }
+    background-position-x: -87px; }
   .ms-button:hover {
     background-color: var(--cell-hover-background-color) !important; }
     .dark .ms-button:hover {
@@ -116,9 +118,9 @@ html {
     background-repeat: no-repeat; }
   .ms-cell._mine {
     border: none;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcxJREFUeNrUVs2qQVEU3kckvxMMZCJTGRgw8g7KTMpfYWLgFUgGfpIYKGUi76EMiAEPocwxE5+zdt1z5Z6ts+uqe1etWu291/r2Wvtb6xwFAPukmNiH5W8BFItFBINBfAzger2y0+n0Oxn0+3082+PxGMfjkd1uN9br9TAYDPj+crnEaDQSZ0UsetV2u00OmEwmaDQa3NbTaDSK7XYLm82GVCoFvVi6AKTT6RTJZBKBQEAI4HK5EIvF0Gw2IYpjFmVG5VBvxywWCysUCnxtv9+z3W6nnTmfz/yMCsKkStTpdLRblstlfEmr1RJmk8lkdLPQfWSn06nZiqJ8M8IkJp3D4dBdN7/ynFhyOBy0tc1mw+r1OrcXi4UQYLVasXw+D6IylaxWqyk/SkRN5PV64Xa7haUQqd1u574ejwfVahVvWdTtdqUBstms8Td4rrtRud/vxllEGo/HoT62oduHw2FhHwgBqEMJRGWOMLCaKaxWK2azmRzAcDiEz+fjvK9UKkKAUCiE+XzOJ2ypVJIbFel0WnMg+lHDRSIRzpZcLge1u/n+er0WBn8LoKcERFSU8ZH6HtDsuVwuUuwyyxxOJBLM7/dLASj//q/iIcAAoQtuUZfeS9MAAAAASUVORK5CYII=); }
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 5.292 5.292'%3E%3Cg transform='matrix(.88775 0 0 .88775 -178.607 -224.924)' fill-rule='evenodd'%3E%3Ccircle r='1.66' cy='256.345' cx='204.172'/%3E%3Cpath d='M204.006 253.961h.331v4.77h-.331z'/%3E%3Cpath d='M201.787 256.511v-.331h4.77v.331zM202.898 257.62l-.192.67-.024-.455-.455-.023zM205.446 255.072l.192-.672.024.456.455.023zM205.446 257.62l.67.192-.454.023-.024.455zM202.898 255.072l-.671-.193.455-.023.024-.456z'/%3E%3Ccircle r='.48' cy='255.882' cx='203.696' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E"); }
   .ms-cell._flag {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAbJJREFUeNrkVb1qAkEQnr0/UKME0gVfIEIsFKvYWNn4AJI0gojvcD6Clb2ghW+gjYVNMM1xGMUiB3bGYBrxJ+jhz7m5XaMoEr07tQj54GNnd+/um5md2UMYY7gkGLgwDAvIuRwe+P24r5OMiigaCp37beO5UsHsZEJtzWaDm04Hrmu1zf7Q44GTBJyKAveiCMRNQmaxgLXLiKxx3GkCQr8P3Gi0s2alHPYEXkol7E8k4E4XwH+yih4iESQVCvCWStFcbxPOkSKChcsFqtsNA59vdcgMA/xwCFetlnkF0slG+JrJkJ7f8CMWw0be44w6otnt8BUIwLveD5/dLk3Z7TkjIJSaTfwYj9OsPRmMwFQVMbMZCJpGbf6UQ95GtVrFNv2qoN3tdIIgCKtG/BlPFujoOS+Xy5uPSpJEbTImk0kcCoUgGo0iUwKyLGOEEDgcDuj1epDP5/eeqdfrlF6vFxRFwePxmK6rqgrBYBAdFMhmszCdToHneWi32wcjLBaL0Gg0YD6f03k4HD5eRSzLri9R00yn0/hoFZHUWIXu3PHLbqaXo1Usl8udOfo/P32r+BZgAImCPd60gNS7AAAAAElFTkSuQmCC);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 5.292 5.292'%3E%3Cg fill-rule='evenodd'%3E%3Cpath d='M2.49 2.446v1.226h-.682v.468H.961v.552h3.128V4.14h-.89v-.468h-.393V2.446z'/%3E%3Cpath d='M2.364.6L.546 1.757l1.818 1.158h.603V.6z' fill='red'/%3E%3C/g%3E%3C/svg%3E");
     background-size: 70%; }
   .ms-cell._question {
     color: #000; }
@@ -134,7 +136,7 @@ html {
 .ms-grid {
   display: inline-grid;
   user-select: none;
-  border: 3px inset;
+  border: 3px inset var(--border-color);
   pointer-events: none; }
   .dark .ms-grid {
     border-color: var(--border-color_dark); }
@@ -145,7 +147,7 @@ html {
   display: flex;
   justify-content: space-between;
   background-color: var(--cell-open-background-color);
-  border: 3px inset;
+  border: 3px inset var(--border-color);
   padding: 5px;
   margin-bottom: 7px; }
   .dark .ms-header {
