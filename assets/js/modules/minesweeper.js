@@ -1,4 +1,5 @@
 import Cell from './cell.js';
+import Storage from './storage.js';
 
 export default class Minesweeper {
     constructor() {
@@ -46,9 +47,7 @@ export default class Minesweeper {
                 modifierKeyDown: false,
                 leftMouseDown: false,
                 rightMouseDown: false,
-                storageData: {
-                    level: 'beginner'
-                }
+                storage: new Storage(this.constructor.name),
             }
         );
         if (this.init()) {
@@ -67,9 +66,12 @@ export default class Minesweeper {
         this.timerElement = document.querySelector('[name="ms-timer"]');
         this.btnElement = document.querySelector('.js-ms-button');
 
-        if (this.checkStorage() && this.readStorage()) {
-            this.level = this.storageData.level;
-        }
+        Object.keys(this.storage.data).forEach(k => {
+            if (typeof this.storage.data[k] === typeof this[k]) {
+                this[k] = this.storage.data[k];
+            }
+        });
+
         this.initMenu();
         this.initCntHandlers();
 
@@ -82,8 +84,7 @@ export default class Minesweeper {
         this.stepCounter = this.timer = 0;
         if (level && this.levels[level]) {
             this.level = level;
-            this.storageData.level = level;
-            this.writeStorage();
+            this.storage.set('level', level);
         }
         this.mineCounter = this.levels[this.level]['mines'];
         this.needOpenToWin = this.levels[this.level]['cols'] * this.levels[this.level]['rows'] - this.levels[this.level]['mines'];
@@ -518,7 +519,7 @@ export default class Minesweeper {
         }
     }
 
-    checkStorage() {
+    _checkStorage() {
         try {
             let storage = window.localStorage,
                 x = '__storage_test__';
@@ -531,7 +532,7 @@ export default class Minesweeper {
         }
     }
 
-    writeStorage() {
+    _writeStorage() {
         try {
             window.localStorage.setItem('ms', JSON.stringify(this.storageData));
             return true;
@@ -541,7 +542,7 @@ export default class Minesweeper {
         }
     }
 
-    readStorage() {
+    _readStorage() {
         try {
             let storageData = JSON.parse(window.localStorage.getItem('ms'));
             Object.keys(storageData).forEach(k => {
