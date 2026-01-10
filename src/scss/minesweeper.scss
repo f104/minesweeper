@@ -1,0 +1,41 @@
+@use 'components/ms.scss';
+@use 'components/ms-body.scss';
+@use 'components/ms-button.scss';
+@use 'components/ms-cell.scss';
+@use 'components/ms-drag.scss';
+@use 'components/ms-grid.scss';
+@use 'components/ms-header.scss';
+@use 'components/ms-input.scss';
+@use 'components/ms-menu.scss';
+@use 'components/toggler.scss';
+@use 'components/toolbox.scss';
+
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+:root {
+    --digi-font-family: 'segment7standard';
+    --cell-background-color: #c9c9c9;
+    --cell-background-color_dark: #222;
+    --cell-open-background-color: lightgray;
+    --cell-open-background-color_dark: #353535;
+    --cell-hover-background-color: #dcdada;
+    --cell-hover-background-color_dark: #424242;
+    --cell-border-color: #aaa;
+    --cell-border-color_dark: #292929;
+    --border-color: #b7b7b7;
+    --border-color_dark: #404040;
+}
+
+html {
+    font-size: 13px;
+}
+
+.dark-mode {
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 2;
+    color: #444;
+}

@@ -1,14 +1,42 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Mac OS X
 .DS_Store
-.DS_Store?
+._.*
 ._*
-.Spotlight-V100
-.Trashes
-.idea
-.vscode
-ehthumbs.db
+
+# Windows
 Thumbs.db
-_config.yml
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.sw?
+.project
+.settings
+tags
+nbproject/*
+
+# Others
 node_modules
-yarn.lock
-nbproject
+*.local
+*.zip
+.eslintcache
+.qodo
+temp
+_temp
 _docs
+dist
+coverage
