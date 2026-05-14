@@ -1,29 +1,31 @@
 {
-    "name": "minesweeper",
-    "author": "kirusanov@gmail.com",
-    "version": "2.0.0",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/f104/minesweeper.git"
-    },
-    "type": "module",
-    "license": "MIT",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview",
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix"
-    },
-    "devDependencies": {
-        "@eslint/js": "^9.39.1",
-        "@types/node": "^25.0.5",
-        "eslint": "^9.39.1",
-        "globals": "^16.5.0",
-        "sass": "^1.77.0",
-        "terser": "^5.44.1",
-        "typescript": "^5.9.3",
-        "typescript-eslint": "^8.46.4",
-        "vite": "^5.4.0"
-    }
+  "name": "minesweeper",
+  "author": "kirusanov@gmail.com",
+  "version": "2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/f104/minesweeper.git"
+  },
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run lint && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^25.0.5",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "sass": "^1.77.0",
+    "terser": "^5.44.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^5.4.0"
+  }
 }
