@@ -108,7 +108,7 @@ export class Minesweeper {
         Object.keys(this.storage.data).forEach(k => {
             const key = k as keyof Minesweeper
             if (typeof this.storage.data[k] === typeof this[key]) {
-                (this as any)[key] = this.storage.data[k]
+                ;(this as Record<keyof Minesweeper, unknown>)[key] = this.storage.data[k]
             }
         })
         this.initMenu()
@@ -540,10 +540,9 @@ export class Minesweeper {
         const stack: Cell[] = []
         stack.push(cell)
         while (stack.length > 0) {
-            let adjacentCells: Cell[]
             let numMines = 0
             const curCell = stack.pop()!
-            adjacentCells = this.getAdjacentCells(curCell)            // calc # of mines
+            const adjacentCells = this.getAdjacentCells(curCell)            // calc # of mines
             adjacentCells.forEach((el) => {
                 if (el.isMine) {
                     numMines += 1

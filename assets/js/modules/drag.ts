@@ -35,7 +35,7 @@ export default class Drag {
         if (this.wrapper && this.elmnt && this.drag) {
             const top = this.storage.get('top')
             const left = this.storage.get('left')
-            if (top && left) {
+            if (typeof top === 'number' && typeof left === 'number') {
                 this.setPosition(top, left)
             }
             this.drag.addEventListener('mousedown', (e) => this.dragMouseDown(e))
