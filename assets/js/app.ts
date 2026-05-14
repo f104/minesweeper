@@ -8,7 +8,7 @@ declare global {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const ms = new Minesweeper(true)
+    const ms = new Minesweeper(process.env.NODE_ENV === 'development')
     window.ms = ms
 
     const wrapper = document.querySelector('.ms-body')
